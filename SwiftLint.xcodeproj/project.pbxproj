@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45852B1B1F229A840014C02A /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45852B1A1F229A840014C02A /* TestFile.swift */; };
+		45852B261F22AA260014C02A /* SwiftLintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45852B251F22AA260014C02A /* SwiftLintTests.swift */; };
 		45CB99A21F21200100D8D4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB99A11F21200100D8D4A5 /* AppDelegate.swift */; };
 		45CB99A41F21200100D8D4A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB99A31F21200100D8D4A5 /* ViewController.swift */; };
 		45CB99A71F21200100D8D4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CB99A51F21200100D8D4A5 /* Main.storyboard */; };
@@ -15,9 +16,22 @@
 		45CB99AC1F21200100D8D4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CB99AA1F21200100D8D4A5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		45852B281F22AA260014C02A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45CB99961F21200100D8D4A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45CB999D1F21200100D8D4A5;
+			remoteInfo = SwiftLint;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		45852B1A1F229A840014C02A /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		45852B1E1F229CA20014C02A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		45852B231F22AA260014C02A /* SwiftLintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45852B251F22AA260014C02A /* SwiftLintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintTests.swift; sourceTree = "<group>"; };
+		45852B271F22AA260014C02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45CB999E1F21200100D8D4A5 /* SwiftLint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CB99A11F21200100D8D4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CB99A31F21200100D8D4A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +42,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		45852B201F22AA260014C02A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45CB999B1F21200100D8D4A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45852B241F22AA260014C02A /* SwiftLintTests */ = {
+			isa = PBXGroup;
+			children = (
+				45852B251F22AA260014C02A /* SwiftLintTests.swift */,
+				45852B271F22AA260014C02A /* Info.plist */,
+			);
+			path = SwiftLintTests;
+			sourceTree = "<group>";
+		};
 		45CB99951F21200100D8D4A5 = {
 			isa = PBXGroup;
 			children = (
 				45CB99A01F21200100D8D4A5 /* SwiftLint */,
+				45852B241F22AA260014C02A /* SwiftLintTests */,
 				45CB999F1F21200100D8D4A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				45CB999E1F21200100D8D4A5 /* SwiftLint.app */,
+				45852B231F22AA260014C02A /* SwiftLintTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +104,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		45852B221F22AA260014C02A /* SwiftLintTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45852B2A1F22AA260014C02A /* Build configuration list for PBXNativeTarget "SwiftLintTests" */;
+			buildPhases = (
+				45852B1F1F22AA260014C02A /* Sources */,
+				45852B201F22AA260014C02A /* Frameworks */,
+				45852B211F22AA260014C02A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45852B291F22AA260014C02A /* PBXTargetDependency */,
+			);
+			name = SwiftLintTests;
+			productName = SwiftLintTests;
+			productReference = 45852B231F22AA260014C02A /* SwiftLintTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		45CB999D1F21200100D8D4A5 /* SwiftLint */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45CB99B01F21200100D8D4A5 /* Build configuration list for PBXNativeTarget "SwiftLint" */;
@@ -96,10 +146,14 @@
 		45CB99961F21200100D8D4A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Sauvik Dolui";
 				TargetAttributes = {
+					45852B221F22AA260014C02A = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 45CB999D1F21200100D8D4A5;
+					};
 					45CB999D1F21200100D8D4A5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2PL4SYCK36;
@@ -122,11 +176,19 @@
 			projectRoot = "";
 			targets = (
 				45CB999D1F21200100D8D4A5 /* SwiftLint */,
+				45852B221F22AA260014C02A /* SwiftLintTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		45852B211F22AA260014C02A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45CB999C1F21200100D8D4A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +219,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		45852B1F1F22AA260014C02A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45852B261F22AA260014C02A /* SwiftLintTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45CB999A1F21200100D8D4A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +238,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45852B291F22AA260014C02A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45CB999D1F21200100D8D4A5 /* SwiftLint */;
+			targetProxy = 45852B281F22AA260014C02A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45CB99A51F21200100D8D4A5 /* Main.storyboard */ = {
@@ -189,6 +267,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		45852B2B1F22AA260014C02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftLintTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sauvikdolui.SwiftLintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLint.app/SwiftLint";
+			};
+			name = Debug;
+		};
+		45852B2C1F22AA260014C02A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftLintTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sauvikdolui.SwiftLintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLint.app/SwiftLint";
+			};
+			name = Release;
+		};
 		45CB99AE1F21200100D8D4A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +443,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		45852B2A1F22AA260014C02A /* Build configuration list for PBXNativeTarget "SwiftLintTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45852B2B1F22AA260014C02A /* Debug */,
+				45852B2C1F22AA260014C02A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		45CB99991F21200100D8D4A5 /* Build configuration list for PBXProject "SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
