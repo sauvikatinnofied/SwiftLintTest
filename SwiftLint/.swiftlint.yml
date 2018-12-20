@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 custom_rules:
   pirates_beat_ninjas: # rule identifier
     include: ".*.swift" # regex that defines paths to include during linting. optional.
@@ -40,47 +41,114 @@ custom_rules:
     regex: '(*:[a-zA-Z])'
     match_kinds: arguments
 
+=======
+# -------------------------------------------------
+#          LIST OF RULES
+# -------------------------------------------------
+>>>>>>> 03b418775213e106da35bf62086d093a75396c97
 disabled_rules: # rule identifiers to exclude from running
+  - colon
   - comma
   - control_statement
-  - trailing_whitespace
 opt_in_rules: # some rules are only opt-in
   - empty_count
   # Find all the available rules by running:
   # swiftlint rules
-# included: # paths to include during linting. `--path` is ignored if present.
-# - Source
+
+
+# -------------------------------------------------
+#      CUSTOM RULES
+# -------------------------------------------------
+custom_rules:
+  # pirates_beat_ninjas: # rule identifier
+  #   included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  #   excluded: ".*Test\\.swift" # regex that defines paths to exclude during linting. optional
+  #   name: "Pirates Beat Ninjas" # rule name. optional.
+  #   regex: "([n,N]inja)" # matching pattern
+  #   match_kinds: # SyntaxKinds to match. optional.
+  #     - comment
+  #     - identifier
+  #   message: "Pirates are better than ninjas." # violation message. optional.
+  #   severity: error # violation severity. optional.
+  # no_hiding_in_strings:
+  #   regex: "([n,N]inja)"
+  #   match_kinds: string
+
+  avoid_view_controller_class_suffix: # rule to avoid "ViewController" in view controller sub classes
+    #included: ".*.swift"
+    name: "UIViewController subclass ends with ViewController suffix"
+    regex: "class ([a-z,A-Z])*ViewController: UIViewController"
+    message: "Remove the ViewController suffix from UIViewController subclass"
+    severity: error # violation severity. optional.
+
+  selector_definition: # rules to avoid #selector(MyVC.viewDidLoad)
+    included: ".*\\.swift" # All swift files 
+    name: "Selector initialization"
+    regex: "#selector\\(\\w+\\..+\\)"
+    message: "Use short hand initialization by just providing the method name"
+    severity: error
+
+  uicolor_extra_prefix: # Avoid using UIColor.red in place of .red only
+    included: ".*\\.swift"
+    name: "Foundation UIColor usages"
+    regex: "UIColor\\.(black|darkGray|lightGray|white|gray|red|green|blue|cyan|yellow|magenta|orange|purple|brown|clear)"
+    message: "Remove UIColor prefix while using foundation colors"
+    severity: warning
+
+# -------------------------------------------------
+#          TARGET FILE INDENTIFICATION
+# -------------------------------------------------
+included: # paths to include during linting. `--path` is ignored if present.
+  - SwiftLintExplore
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
   - Source/ExcludedFolder
   - Source/ExcludedFile.swift
 
+
+# -------------------------------------------------
+#      CUSTOM CONFIGURATION FOR BUILT IN RULES
+# -------------------------------------------------
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
-trailing_newline:
+
+attributes:
+  always_on_same_line: ["@IBAction", "@NSManaged"]
+  always_on_line_above: []
+
 colon:
-  flexible_right_spacing: true
+  flexible_right_spacing: false
   apply_to_dictionaries: true
 
-force_cast: warning # implicitly
-force_try:
-  severity: warning # explicitly
-# rules that have both warning and error levels, can set just the warning level
-# implicitly
-line_length: 120
-# they can set both implicitly with an array
-type_body_length:
-  - 300 # warning
-  - 400 # error
-# or they can set both explicitly
+cyclomatic_complexity:
+  warning: 10
+  error: 20
+  ignores_case_statements: false 
+
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+discouraged_direct_init:
+  types: ["Bundle", "Bundle.init", "UIDevice", "UIDevice.init"]
+
 file_length:
   warning: 500
   error: 1200
-# naming rules can set warnings/errors for min_length and max_length
-# additionally they can set excluded names
+force_try:
+  severity: warning # explicitly
+
+type_body_length:
+  - 300 # warning
+  - 400 # error
+
 vertical_whitespace:
   max_empty_lines: 3
+
+
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
 type_name:
   min_length: 4 # only warning
   max_length: # warning and error
@@ -94,8 +162,48 @@ identifier_name:
     - id
     - URL
     - GlobalAPIKey
-    - lhs
-    - rhs
+
+
+force_cast: warning # implicitly
+
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+line_length:
+  warning: 120 
+  error: 200
+  ignores_urls: true 
+  ignores_function_declarations: true 
+  ignores_comments: true
+
+# they can set both implicitly with an array
+
+# or they can set both explicitly
+
+
+
+
+
+
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
 
 
+# Available Match Kinds
+# ---------------------
+#  argument
+#  attribute.builtin
+#  attribute.id
+#  buildconfig.id
+#  buildconfig.keyword
+#  comment
+#  comment.mark
+#  comment.url
+#  doccomment
+#  doccomment.field
+#  identifier
+#  keyword
+#  number
+#  objectliteral
+#  parameter
+#  placeholder
+#  string_interpolation_anchor
+#  typeidentifier
