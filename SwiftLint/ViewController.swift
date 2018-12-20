@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         // TODO:
-        let msg = "hey ther   ,  or2"
+        let msg = "hey ther  Ninja ,  or2"
         print(msg)
     }
 

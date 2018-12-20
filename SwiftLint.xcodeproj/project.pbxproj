@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4511F1A121CBB0AF001115CE /* Array+Project_Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4511F1A021CBB0AF001115CE /* Array+Project_Name.swift */; };
+		4511F1A321CBB37D001115CE /* ArrayExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4511F1A221CBB37D001115CE /* ArrayExtensionTest.swift */; };
 		45852B1B1F229A840014C02A /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45852B1A1F229A840014C02A /* TestFile.swift */; };
-		45852B261F22AA260014C02A /* SwiftLintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45852B251F22AA260014C02A /* SwiftLintTests.swift */; };
 		45CB99A21F21200100D8D4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB99A11F21200100D8D4A5 /* AppDelegate.swift */; };
 		45CB99A41F21200100D8D4A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB99A31F21200100D8D4A5 /* ViewController.swift */; };
 		45CB99A71F21200100D8D4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CB99A51F21200100D8D4A5 /* Main.storyboard */; };
@@ -27,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4511F1A021CBB0AF001115CE /* Array+Project_Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Project_Name.swift"; sourceTree = "<group>"; };
+		4511F1A221CBB37D001115CE /* ArrayExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTest.swift; sourceTree = "<group>"; };
 		45852B1A1F229A840014C02A /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
-		45852B1E1F229CA20014C02A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		45852B231F22AA260014C02A /* SwiftLintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45852B251F22AA260014C02A /* SwiftLintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintTests.swift; sourceTree = "<group>"; };
 		45852B271F22AA260014C02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45CB999E1F21200100D8D4A5 /* SwiftLint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CB99A11F21200100D8D4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +60,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4511F19F21CBB089001115CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4511F1A021CBB0AF001115CE /* Array+Project_Name.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		45852B241F22AA260014C02A /* SwiftLintTests */ = {
 			isa = PBXGroup;
 			children = (
-				45852B251F22AA260014C02A /* SwiftLintTests.swift */,
+				4511F1A221CBB37D001115CE /* ArrayExtensionTest.swift */,
 				45852B271F22AA260014C02A /* Info.plist */,
 			);
 			path = SwiftLintTests;
@@ -89,7 +98,7 @@
 		45CB99A01F21200100D8D4A5 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				45852B1E1F229CA20014C02A /* .swiftlint.yml */,
+				4511F19F21CBB089001115CE /* Extensions */,
 				45CB99A11F21200100D8D4A5 /* AppDelegate.swift */,
 				45CB99A31F21200100D8D4A5 /* ViewController.swift */,
 				45CB99A51F21200100D8D4A5 /* Main.storyboard */,
@@ -152,12 +161,13 @@
 				TargetAttributes = {
 					45852B221F22AA260014C02A = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0940;
 						TestTargetID = 45CB999D1F21200100D8D4A5;
 					};
 					45CB999D1F21200100D8D4A5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2PL4SYCK36;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -223,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45852B261F22AA260014C02A /* SwiftLintTests.swift in Sources */,
+				4511F1A321CBB37D001115CE /* ArrayExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4511F1A121CBB0AF001115CE /* Array+Project_Name.swift in Sources */,
 				45852B1B1F229A840014C02A /* TestFile.swift in Sources */,
 				45CB99A41F21200100D8D4A5 /* ViewController.swift in Sources */,
 				45CB99A21F21200100D8D4A5 /* AppDelegate.swift in Sources */,
@@ -276,10 +287,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = SwiftLintTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauvikdolui.SwiftLintTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLint.app/SwiftLint";
@@ -295,10 +307,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = SwiftLintTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauvikdolui.SwiftLintTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLint.app/SwiftLint";
@@ -421,7 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauvikdolui.SwiftLint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -435,7 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauvikdolui.SwiftLint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -450,6 +463,7 @@
 				45852B2C1F22AA260014C02A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45CB99991F21200100D8D4A5 /* Build configuration list for PBXProject "SwiftLint" */ = {
 			isa = XCConfigurationList;
