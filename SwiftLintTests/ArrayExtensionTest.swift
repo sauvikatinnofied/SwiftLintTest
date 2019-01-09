@@ -10,7 +10,7 @@ import XCTest
 
 @testable import SwiftLint
 
-class ArrayExtensionTest: XCTestCase {
+class ArrayExtensionTest : XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -71,6 +71,8 @@ class ArrayExtensionTest: XCTestCase {
         
         ints.insert(14, before: 15)
         XCTAssertEqual([-1, 0, 1, 2, 4, 6, 7, 10, 1, 6, 7, 14, 15, 16], ints, "Insertion is not working after an element")
+    
+        
     }
 
 }
